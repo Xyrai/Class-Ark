@@ -16,9 +16,21 @@
         <ul
           class="flex items-center w-full gap-x-12 text-xl shadow font-[IBM_Plex_Sans]"
         >
-          <li class="ml-12"><a href="#">OVERVIEW</a></li>
-          <li><a href="#">ABILITIES</a></li>
-          <li><a href="#">GAMEPLAY</a></li>
+          <li class="ml-12">
+            <a href="#" :class="swiperIndex === 0 ? 'text-white' : null"
+              >OVERVIEW</a
+            >
+          </li>
+          <li>
+            <a href="#" :class="swiperIndex === 1 ? 'text-white' : null"
+              >ABILITIES</a
+            >
+          </li>
+          <li>
+            <a href="#" :class="swiperIndex === 2 ? 'text-white' : null"
+              >GAMEPLAY</a
+            >
+          </li>
           <li class="ml-auto"><a href="#">CLASSES</a></li>
         </ul>
       </nav>
@@ -27,4 +39,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const swiperIndex = useState("swiperIndex");
+</script>
