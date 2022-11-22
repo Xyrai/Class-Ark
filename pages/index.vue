@@ -76,7 +76,7 @@ const swiperRef = ref(null);
 
 const onSwiper = (swiper) => {
   swiperRef.value = swiper;
-  swiperRef.value.slideTo(1);
+  // swiperRef.value.slideTo(1);
 };
 
 console.log(swiperRef);
