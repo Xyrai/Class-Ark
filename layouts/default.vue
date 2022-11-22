@@ -17,19 +17,28 @@
           class="flex items-center w-full gap-x-12 text-xl shadow font-[IBM_Plex_Sans]"
         >
           <li class="ml-12">
-            <a href="#" :class="swiperIndex === 0 ? 'text-white' : null"
-              >OVERVIEW</a
+            <button
+              @click="setSwiperIndex(0)"
+              :class="swiperIndex === 0 ? 'text-white' : null"
             >
+              OVERVIEW
+            </button>
           </li>
           <li>
-            <a href="#" :class="swiperIndex === 1 ? 'text-white' : null"
-              >ABILITIES</a
+            <button
+              @click="setSwiperIndex(1)"
+              :class="swiperIndex === 1 ? 'text-white' : null"
             >
+              ABILITIES
+            </button>
           </li>
           <li>
-            <a href="#" :class="swiperIndex === 2 ? 'text-white' : null"
-              >GAMEPLAY</a
+            <button
+              @click="setSwiperIndex(2)"
+              :class="swiperIndex === 2 ? 'text-white' : null"
             >
+              GAMEPLAY
+            </button>
           </li>
           <li class="ml-auto"><a href="#">CLASSES</a></li>
         </ul>
@@ -40,5 +49,9 @@
 </template>
 
 <script setup lang="ts">
-const swiperIndex = useState("swiperIndex");
+const swiperIndex = useState("swiperIndex", () => 0);
+
+const setSwiperIndex = (index: number) => {
+  swiperIndex.value = index;
+};
 </script>

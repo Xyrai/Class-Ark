@@ -1,6 +1,7 @@
 <template>
   <main class="h-screen">
     <swiper
+      @swiper="onSwiper"
       :modules="modules"
       :slides-per-view="1"
       :allow-touch-move="false"
@@ -38,14 +39,21 @@
           class="absolute bottom-0 right-0"
         />
       </swiper-slide>
+      <img
+        src="@/assets/img/arrow-left.svg"
+        class="swiper-button-prev absolute left-0 top-0 bottom-0 z-10 my-auto"
+        :class="swiperState > 0 ? 'cursor-pointer' : 'hidden'"
+        @click="updateIndex('prev')"
+      />
+      <img
+        src="@/assets/img/arrow-right.svg"
+        class="swiper-button-next absolute right-0 top-0 bottom-0 z-10 my-auto"
+        :class="
+          swiperState >= 0 && swiperState < 2 ? 'cursor-pointer' : 'hidden'
+        "
+        @click="updateIndex('next')"
+      />
     </swiper>
-
-    <button class="swiper-button-prev" @click="updateIndex('prev')">
-      prev
-    </button>
-    <button class="swiper-button-next" @click="updateIndex('next')">
-      next
-    </button>
   </main>
 </template>
 
@@ -61,16 +69,26 @@ const swiperNavOptions: NavigationOptions = {
   nextEl: ".swiper-button-next",
 };
 
-// const testSwiper = useSwiper();
 const modules = [Pagination, Navigation];
-const swiperState = useState("swiperIndex", () => 0);
+const swiperState = useState("swiperIndex");
 
+const swiperRef = ref(null);
+
+const onSwiper = (swiper) => {
+  swiperRef.value = swiper;
+  swiperRef.value.slideTo(1);
+};
+
+console.log(swiperRef);
 const updateIndex = (value: string) => {
   if (value === "prev" && swiperState.value > 0) {
     swiperState.value--;
     return;
   }
 
-  swiperState.value++;
+  if (value === "next" && swiperState.value >= 0 && swiperState.value < 2) {
+    swiperState.value++;
+    return;
+  }
 };
 </script>
