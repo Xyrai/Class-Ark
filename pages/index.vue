@@ -20,7 +20,7 @@
         />
       </swiper-slide>
       <swiper-slide
-        class="bg-[url('@/assets/img/bg-artist.png')] h-full bg-cover bg-no-repeat relative w-full"
+        class="bg-[url('@/assets/img/bg-abilities.png')] h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
         <p>LOL TEST</p>
         <img
@@ -30,28 +30,37 @@
         />
       </swiper-slide>
       <swiper-slide
-        class="bg-[url('@/assets/img/bg-artist.png')] h-full bg-cover bg-no-repeat relative w-full"
+        class="bg-[url('@/assets/img/bg-artist-video.png')] flex justify-center items-center z-10 h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
-        <p>LOL TEST</p>
-        <img
-          src="@/assets/img/artist.png"
-          alt=""
-          class="absolute bottom-0 right-0"
-        />
+        <div class="absolute inset-0 bg-black opacity-70 -z-10"></div>
+
+        <div class="border-2 w-3/4">
+          <iframe
+            src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            class="aspect-[1460/821] w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            autoplay
+          ></iframe>
+        </div>
       </swiper-slide>
       <img
         src="@/assets/img/arrow-left.svg"
-        class="swiper-button-prev absolute left-0 top-0 bottom-0 z-10 my-auto"
+        class="swiper-button-prev absolute left-7 top-0 bottom-0 z-10 my-auto"
         :class="swiperState > 0 ? 'cursor-pointer' : 'hidden'"
         @click="updateIndex('prev')"
+        draggable="false"
       />
       <img
         src="@/assets/img/arrow-right.svg"
-        class="swiper-button-next absolute right-0 top-0 bottom-0 z-10 my-auto"
+        class="swiper-button-next absolute right-7 top-0 bottom-0 z-10 my-auto"
         :class="
           swiperState >= 0 && swiperState < 2 ? 'cursor-pointer' : 'hidden'
         "
         @click="updateIndex('next')"
+        draggable="false"
       />
     </swiper>
   </main>
@@ -72,6 +81,8 @@ const swiperNavOptions: NavigationOptions = {
 const modules = [Pagination, Navigation];
 const swiperState = useState("swiperIndex");
 const swiperRef = ref(null);
+
+const videoRef = ref(null);
 
 const onSwiper = (swiper: typeof Swiper) => {
   swiperRef.value = swiper;
