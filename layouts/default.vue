@@ -50,8 +50,10 @@
 
 <script setup lang="ts">
 const swiperIndex = useState("swiperIndex", () => 0);
+const swiper = useState("swiper");
 
 const setSwiperIndex = (index: number) => {
   swiperIndex.value = index;
+  swiper?.value.slideTo(index);
 };
 </script>

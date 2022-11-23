@@ -71,15 +71,13 @@ const swiperNavOptions: NavigationOptions = {
 
 const modules = [Pagination, Navigation];
 const swiperState = useState("swiperIndex");
-
 const swiperRef = ref(null);
 
-const onSwiper = (swiper) => {
+const onSwiper = (swiper: typeof Swiper) => {
   swiperRef.value = swiper;
-  // swiperRef.value.slideTo(1);
+  useState("swiper", () => swiper);
 };
 
-console.log(swiperRef);
 const updateIndex = (value: string) => {
   if (value === "prev" && swiperState.value > 0) {
     swiperState.value--;
