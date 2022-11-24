@@ -14,7 +14,7 @@
           />
         </a>
         <ul
-          class="flex items-center w-full h-full gap-x-12 text-xl font-[IBM_Plex_Sans] -mb-[1px]"
+          class="flex items-center w-full h-full gap-x-12 text-xl -mb-[1px] font-ibm"
         >
           <li
             class="ml-12 drop-shadow h-full flex justify-center items-center w-28"
@@ -22,7 +22,9 @@
               swiperIndex === 0 ? 'border-b-white border-b text-white' : null
             "
           >
-            <button @click="setSwiperIndex(0)">OVERVIEW</button>
+            <button class="tracking-wider" @click="setSwiperIndex(0)">
+              OVERVIEW
+            </button>
           </li>
           <li
             class="drop-shadow h-full flex justify-center items-center w-28"
@@ -30,7 +32,9 @@
               swiperIndex === 1 ? 'border-b-white border-b text-white' : null
             "
           >
-            <button @click="setSwiperIndex(1)">ABILITIES</button>
+            <button class="tracking-wider" @click="setSwiperIndex(1)">
+              ABILITIES
+            </button>
           </li>
           <li
             class="drop-shadow h-full flex justify-center items-center w-28"
@@ -38,9 +42,13 @@
               swiperIndex === 2 ? 'border-b-white border-b text-white' : null
             "
           >
-            <button @click="setSwiperIndex(2)">GAMEPLAY</button>
+            <button class="tracking-wider" @click="setSwiperIndex(2)">
+              GAMEPLAY
+            </button>
           </li>
-          <li class="ml-auto drop-shadow"><a href="#">CLASSES</a></li>
+          <li class="ml-auto drop-shadow">
+            <a class="tracking-wider" href="#">CLASSES</a>
+          </li>
         </ul>
       </nav>
     </header>
