@@ -38,11 +38,6 @@
       <swiper-slide
         class="bg-[url('@/assets/img/bg-abilities.png')] h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
-        <img
-          src="@/assets/img/artist.png"
-          alt=""
-          class="absolute bottom-0 right-0"
-        />
       </swiper-slide>
       <swiper-slide
         class="bg-[url('@/assets/img/bg-artist-video.png')] flex justify-center items-center z-10 h-full bg-cover bg-no-repeat relative w-full pt-20"
@@ -63,14 +58,14 @@
       </swiper-slide>
       <img
         src="@/assets/img/arrow-left.svg"
-        class="swiper-button-prev absolute left-7 top-0 bottom-0 z-10 my-auto"
+        class="swiper-button-prev absolute left-7 top-0 bottom-0 z-10 my-auto transition-opacity hover:opacity-60"
         :class="swiperState > 0 ? 'cursor-pointer' : 'hidden'"
         @click="updateIndex('prev')"
         draggable="false"
       />
       <img
         src="@/assets/img/arrow-right.svg"
-        class="swiper-button-next absolute right-7 top-0 bottom-0 z-10 my-auto"
+        class="swiper-button-next absolute right-7 top-0 bottom-0 z-10 my-auto transition-opacity hover:opacity-60"
         :class="
           swiperState >= 0 && swiperState < 2 ? 'cursor-pointer' : 'hidden'
         "
