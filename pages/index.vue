@@ -11,7 +11,23 @@
       <swiper-slide
         class="bg-[url('@/assets/img/bg-artist.png')] h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
-        <p>LOL TEST</p>
+        <div class="ml-28 flex flex-col gap-x-2 items-center w-[634px] mt-60">
+          <div>
+            <img
+              class="aspect-[127/116] z-10"
+              src="@/assets/img/icon-artist.svg"
+              alt=""
+            />
+          </div>
+          <h1
+            class="first-letter:text-[100px] text-[85px] font-ibmserif tracking-wider z-10"
+          >
+            ARTIST
+          </h1>
+          <p class="text-3xl mt-10 z-10">
+            "I'm going to draw, to protect you and everyone..."
+          </p>
+        </div>
         <nuxt-img
           src="/artist.png"
           alt=""
@@ -22,7 +38,6 @@
       <swiper-slide
         class="bg-[url('@/assets/img/bg-abilities.png')] h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
-        <p>LOL TEST</p>
         <img
           src="@/assets/img/artist.png"
           alt=""
@@ -81,8 +96,6 @@ const swiperNavOptions: NavigationOptions = {
 const modules = [Pagination, Navigation];
 const swiperState = useState("swiperIndex");
 const swiperRef = ref(null);
-
-const videoRef = ref(null);
 
 const onSwiper = (swiper: typeof Swiper) => {
   swiperRef.value = swiper;

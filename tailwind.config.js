@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ibm: ["IBM Plex Sans"],
+        ibmserif: ["IBM Plex Serif"],
       },
     },
   },
