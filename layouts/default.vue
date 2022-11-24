@@ -14,31 +14,31 @@
           />
         </a>
         <ul
-          class="flex items-center w-full gap-x-12 text-xl font-[IBM_Plex_Sans]"
+          class="flex items-center w-full h-full gap-x-12 text-xl font-[IBM_Plex_Sans] -mb-[1px]"
         >
-          <li class="ml-12 drop-shadow">
-            <button
-              @click="setSwiperIndex(0)"
-              :class="swiperIndex === 0 ? 'text-white' : null"
-            >
-              OVERVIEW
-            </button>
+          <li
+            class="ml-12 drop-shadow h-full flex justify-center items-center w-28"
+            :class="
+              swiperIndex === 0 ? 'border-b-white border-b text-white' : null
+            "
+          >
+            <button @click="setSwiperIndex(0)">OVERVIEW</button>
           </li>
-          <li class="drop-shadow">
-            <button
-              @click="setSwiperIndex(1)"
-              :class="swiperIndex === 1 ? 'text-white' : null"
-            >
-              ABILITIES
-            </button>
+          <li
+            class="drop-shadow h-full flex justify-center items-center w-28"
+            :class="
+              swiperIndex === 1 ? 'border-b-white border-b text-white' : null
+            "
+          >
+            <button @click="setSwiperIndex(1)">ABILITIES</button>
           </li>
-          <li class="drop-shadow">
-            <button
-              @click="setSwiperIndex(2)"
-              :class="swiperIndex === 2 ? 'text-white' : null"
-            >
-              GAMEPLAY
-            </button>
+          <li
+            class="drop-shadow h-full flex justify-center items-center w-28"
+            :class="
+              swiperIndex === 2 ? 'border-b-white border-b text-white' : null
+            "
+          >
+            <button @click="setSwiperIndex(2)">GAMEPLAY</button>
           </li>
           <li class="ml-auto drop-shadow"><a href="#">CLASSES</a></li>
         </ul>
