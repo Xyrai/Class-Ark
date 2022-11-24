@@ -24,7 +24,7 @@
           >
             ARTIST
           </h1>
-          <p class="text-3xl mt-10 z-10">
+          <p class="text-3xl mt-10 z-10 font-light">
             "I'm going to draw, to protect you and everyone..."
           </p>
         </div>
