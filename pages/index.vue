@@ -38,18 +38,29 @@
       <swiper-slide
         class="bg-[url('@/assets/img/bg-abilities.png')] h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
-        <hr
-          class="absolute left-0 right-1/3 bottom-0 top-48 my-auto border-t-[#ffffff50]"
-        />
-        <iframe
-          src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=0"
-          title="YouTube video player"
-          frameborder="0"
-          class="aspect-[737/414] absolute right-60 top-0 bottom-0 my-auto w-[737px] border-2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          autoplay
-        ></iframe>
+        <div class="flex w-full h-full justify-between px-60">
+          <div class="flex mt-60">
+            <h1
+              class="first-letter:text-[100px] text-[85px] font-ibmserif tracking-wider z-10 leading-"
+            >
+              ABILITIES
+            </h1>
+
+            <hr class="w-full border-t-[#ffffff50]" />
+          </div>
+
+          <div class="mt-60">
+            <iframe
+              src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              class="aspect-[737/414] right-60 w-[737px] border-2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              autoplay
+            ></iframe>
+          </div>
+        </div>
       </swiper-slide>
       <swiper-slide
         class="bg-[url('@/assets/img/bg-artist-video.png')] flex justify-center items-center z-10 h-full bg-cover bg-no-repeat relative w-full pt-20"
