@@ -39,14 +39,18 @@
         class="bg-[url('@/assets/img/bg-abilities.png')] h-full bg-cover bg-no-repeat relative w-full pt-20"
       >
         <div class="flex w-full h-full justify-between px-60">
-          <div class="flex mt-60">
+          <div class="flex flex-col mt-56 w-full">
             <h1
-              class="first-letter:text-[100px] text-[85px] font-ibmserif tracking-wider z-10 leading-"
+              class="first-letter:text-[100px] text-[85px] font-ibmserif tracking-wider z-10 leading-none"
             >
               ABILITIES
             </h1>
 
-            <hr class="w-full border-t-[#ffffff50]" />
+            <div class="flex flex-col mt-48">
+              <AbilityList />
+
+              <hr class="w-full border-t-[#ffffff50] h-[1px]" />
+            </div>
           </div>
 
           <div class="mt-60">
