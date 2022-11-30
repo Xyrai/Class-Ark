@@ -141,21 +141,21 @@ const abilities: Array<IAbility> = [
     category: "awakening",
     description: "Levitate in the swirl of flower petals...",
     image: "artist-ultimate-1.png",
-    videoUrl: "lol",
+    videoUrl: "peach.mp4",
   },
   {
     name: "Spectacle",
     category: "awakening",
     description: "Feel the strength of an Artist's scroll...",
     image: "spectacle.webp",
-    videoUrl: "lol",
+    videoUrl: "spectacle.mp4",
   },
   {
     name: "Hopper",
     category: "ABILITY",
     description: "Ride the brush and bounce up...",
     image: "hopper.webp",
-    videoUrl: "lol",
+    videoUrl: "hopper.mp4",
   },
   {
     name: "Mirinae",
@@ -163,14 +163,14 @@ const abilities: Array<IAbility> = [
     description:
       "Concentrate dimensional power into the brush to change the space...",
     image: "mirinae.webp",
-    videoUrl: "lol",
+    videoUrl: "mirinae.mp4",
   },
   {
     name: "Sprinkle",
     category: "ABILITY",
     description: "Concentrate dimensional energy into the brush...",
     image: "sprinkle.webp",
-    videoUrl: "lol",
+    videoUrl: "sprinkle.mp4",
   },
 ];
 </script>
