@@ -4,7 +4,7 @@
     :class="active ? 'text-[#D0A85C]' : 'hover:text-[#D0A85C] cursor-pointer'"
   >
     <button
-      class="pb-1 transition-transform duration-500"
+      class="pb-1 transition-transform duration-500 w-[70px]"
       :class="active ? '-translate-y-3' : 'hover:-translate-y-2'"
     >
       <img
