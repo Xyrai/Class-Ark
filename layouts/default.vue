@@ -5,7 +5,7 @@
     >
       <nav class="h-full w-full flex items-center">
         <a href="" class="aspect-[163/47]">
-          <nuxt-img
+          <img
             src="/logo.png"
             alt="Lost Ark Logo"
             format="webp"

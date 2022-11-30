@@ -28,7 +28,7 @@
             "I'm going to draw, to protect you and everyone..."
           </p>
         </div>
-        <nuxt-img
+        <img
           src="/artist.png"
           alt=""
           class="absolute bottom-0 right-0"
