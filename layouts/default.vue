@@ -61,6 +61,12 @@ const swiperIndex = useState("swiperIndex", () => 0);
 const swiper = useState("swiper");
 
 const setSwiperIndex = (index: number) => {
+  const abilityVideo = document.querySelector("#abilityVideo");
+
+  if (index !== 1) {
+    abilityVideo.pause();
+  }
+
   swiperIndex.value = index;
   swiper?.value.slideTo(index);
 };
