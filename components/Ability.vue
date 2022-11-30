@@ -8,7 +8,7 @@
       :class="active ? '-translate-y-3' : 'hover:-translate-y-2'"
     >
       <img
-        src="@/assets/img/artist-ultimate-1.png"
+        :src="`/${ability.image}`"
         alt=""
         class="w-full h-full aspect-square"
         draggable="false"
@@ -23,7 +23,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  active: Boolean,
-});
+import { IAbility } from "@/interfaces/IAbility";
+defineProps<{
+  ability: IAbility;
+  active: boolean;
+}>();
 </script>

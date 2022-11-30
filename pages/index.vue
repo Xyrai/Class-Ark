@@ -47,7 +47,7 @@
             </h1>
 
             <div class="flex flex-col mt-44">
-              <AbilityList />
+              <AbilityList :abilities="abilities" />
             </div>
           </div>
 
@@ -107,6 +107,7 @@ import { Navigation, Pagination } from "swiper";
 import { NavigationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/pagination";
+import { IAbility } from "~~/interfaces/IAbility";
 
 const swiperNavOptions: NavigationOptions = {
   prevEl: ".swiper-button-prev",
@@ -133,4 +134,28 @@ const updateIndex = (value: string) => {
     return;
   }
 };
+
+const abilities: Array<IAbility> = [
+  {
+    name: "Dreamy Peach Garden",
+    category: "awakening",
+    description: "Levitate in the swirl of flower petals...",
+    image: "artist-ultimate-1.png",
+    videoUrl: "lol",
+  },
+  {
+    name: "Dreamy Peach Gasdfsdfrden",
+    category: "awakening",
+    description: "Levitate in the swirl of flower petals...",
+    image: "artist-ultimate-1.png",
+    videoUrl: "lol",
+  },
+  {
+    name: "Dreamy Peach Gardensdfdsf",
+    category: "awakening",
+    description: "Levitate in the swirl of flower petals...",
+    image: "artist-ultimate-1.png",
+    videoUrl: "lol",
+  },
+];
 </script>
