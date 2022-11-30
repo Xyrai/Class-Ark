@@ -51,7 +51,7 @@
             </div>
           </div>
 
-          <div class="mt-60 h-[420px] aspect-[737/420]">
+          <div class="mt-60 h-[491px] aspect-[863/491]">
             <video
               id="abilityVideo"
               :src="`/${currentAbility.videoUrl}`"
