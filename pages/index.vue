@@ -48,8 +48,6 @@
 
             <div class="flex flex-col mt-44">
               <AbilityList />
-
-              <hr class="w-full border-t-[#ffffff50] h-[1px]" />
             </div>
           </div>
 
