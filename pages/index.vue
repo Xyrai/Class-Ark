@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen">
+  <main class="h-full">
     <swiper
       @swiper="onSwiper"
       :modules="modules"
