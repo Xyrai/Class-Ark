@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        ibm: ["IBM Plex Sans"],
-        ibmserif: ["IBM Plex Serif"],
+        ibm: ["IBM Plex Sans", "sans-serif"],
+        ibmserif: ["IBM Plex Serif", "serif"],
       },
     },
   },
