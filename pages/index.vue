@@ -51,13 +51,11 @@
             </div>
           </div>
 
-          <div
-            class="mt-60 min-w-[737px] min-h-[420px] aspect-[737/420] right-60"
-          >
+          <div class="mt-60 h-[420px] aspect-[737/420]">
             <video
               id="abilityVideo"
               :src="`/${currentAbility.videoUrl}`"
-              class="w-full border-2 border-[#ffffff50] p-1 object-cover"
+              class="w-full h-full border-2 border-[#ffffff50] p-1 object-cover"
               :autoplay="swiperState == 1 ? true : null"
               :playsinline="swiperState == 1 ? true : null"
               controls
