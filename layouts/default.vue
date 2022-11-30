@@ -46,9 +46,9 @@
               GAMEPLAY
             </button>
           </li>
-          <li class="ml-auto drop-shadow">
+          <!-- <li class="ml-auto drop-shadow">
             <a class="tracking-wider" href="#">CLASSES</a>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </header>
