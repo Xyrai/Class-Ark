@@ -53,10 +53,10 @@
 
           <div class="mt-60">
             <iframe
-              src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=0"
+              src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=1"
               title="YouTube video player"
               frameborder="0"
-              class="aspect-[737/414] right-60 w-[737px] border-2"
+              class="aspect-[737/420] right-60 w-[737px] border-2 border-[#ffffff50] p-1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               autoplay
@@ -71,7 +71,7 @@
 
         <div class="border-2 w-3/4">
           <iframe
-            src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=0"
+            src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=1"
             title="YouTube video player"
             frameborder="0"
             class="aspect-[1460/821] w-full h-full"
