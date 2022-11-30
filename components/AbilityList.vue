@@ -35,6 +35,7 @@ const selectedAbilityName = ref(props.abilities[0].name);
 const selectAbility = (ability: IAbility) => {
   selectedAbility.value = ability;
   selectedAbilityName.value = ability.name;
+  useState("ability").value = ability;
 };
 </script>
 

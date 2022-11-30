@@ -52,15 +52,15 @@
           </div>
 
           <div class="mt-60">
-            <iframe
-              src="https://www.youtube.com/embed/wl0q0xi10Ng?controls=1"
-              title="YouTube video player"
-              frameborder="0"
-              class="aspect-[737/420] right-60 w-[737px] border-2 border-[#ffffff50] p-1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              autoplay
-            ></iframe>
+            <video
+              id="abilityVideo"
+              :src="`/${currentAbility.videoUrl}`"
+              class="aspect-[737/420] right-60 w-full border-2 border-[#ffffff50] p-1"
+              :autoplay="swiperState == 1 ? true : null"
+              :playsinline="swiperState == 1 ? true : null"
+              controls
+              loop
+            ></video>
           </div>
         </div>
       </swiper-slide>
@@ -108,6 +108,7 @@ import { NavigationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/pagination";
 import { IAbility } from "~~/interfaces/IAbility";
+import { emitKeypressEvents } from "readline";
 
 const swiperNavOptions: NavigationOptions = {
   prevEl: ".swiper-button-prev",
@@ -124,12 +125,27 @@ const onSwiper = (swiper: typeof Swiper) => {
 };
 
 const updateIndex = (value: string) => {
+  const abilityVideo = document.querySelector("#abilityVideo");
+
   if (value === "prev" && swiperState.value > 0) {
+    // Check if current slide is abilities, then play video else pause
+    if (swiperState.value === 2) {
+      abilityVideo.play();
+    } else {
+      abilityVideo.pause();
+    }
+
     swiperState.value--;
     return;
   }
 
   if (value === "next" && swiperState.value >= 0 && swiperState.value < 2) {
+    if (swiperState.value === 0) {
+      abilityVideo.play();
+    } else {
+      abilityVideo.pause();
+    }
+
     swiperState.value++;
     return;
   }
@@ -173,4 +189,6 @@ const abilities: Array<IAbility> = [
     videoUrl: "sprinkle.mp4",
   },
 ];
+
+const currentAbility = useState("ability", () => abilities[0]);
 </script>
